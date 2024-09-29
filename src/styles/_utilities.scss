@@ -1,0 +1,74 @@
+@use "variables" as vars;
+
+// Margin utilities
+@mixin generate-margins() {
+  @for $i from 0 through 5 {
+    .qc-m-#{$i} {
+      margin: $i * vars.$spacer / 4 !important;
+    }
+    .qc-mt-#{$i} {
+      margin-top: $i * vars.$spacer / 4 !important;
+    }
+    .qc-mb-#{$i} {
+      margin-bottom: $i * vars.$spacer / 4 !important;
+    }
+    .qc-ms-#{$i} {
+      margin-left: $i * vars.$spacer / 4 !important;
+    }
+    .qc-me-#{$i} {
+      margin-right: $i * vars.$spacer / 4 !important;
+    }
+    .qc-mx-#{$i} {
+      margin-left: $i * vars.$spacer / 4 !important;
+      margin-right: $i * vars.$spacer / 4 !important;
+    }
+    .qc-my-#{$i} {
+      margin-top: $i * vars.$spacer / 4 !important;
+      margin-bottom: $i * vars.$spacer / 4 !important;
+    }
+  }
+}
+
+@include generate-margins();
+
+// Padding utilities
+@mixin generate-paddings() {
+  @for $i from 0 through 5 {
+    .qc-p-#{$i} {
+      padding: $i * vars.$spacer / 4 !important;
+    }
+    .qc-pt-#{$i} {
+      padding-top: $i * vars.$spacer / 4 !important;
+    }
+    .qc-pb-#{$i} {
+      padding-bottom: $i * vars.$spacer / 4 !important;
+    }
+    .qc-ps-#{$i} {
+      padding-left: $i * vars.$spacer / 4 !important;
+    }
+    .qc-pe-#{$i} {
+      padding-right: $i * vars.$spacer / 4 !important;
+    }
+    .qc-px-#{$i} {
+      padding-left: $i * vars.$spacer / 4 !important;
+      padding-right: $i * vars.$spacer / 4 !important;
+    }
+    .qc-py-#{$i} {
+      padding-top: $i * vars.$spacer / 4 !important;
+      padding-bottom: $i * vars.$spacer / 4 !important;
+    }
+  }
+}
+
+@include generate-paddings();
+
+// Font weight utilities
+@mixin generate-font-weights() {
+  @for $i from 1 through 9 {
+    .qc-fw-#{$i} {
+      font-weight: $i * vars.$fontweight !important;
+    }
+  }
+}
+
+@include generate-font-weights();

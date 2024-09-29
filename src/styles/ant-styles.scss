@@ -1,0 +1,172 @@
+@use 'variables' as vars;
+// -------------------
+.ant-input-affix-wrapper .ant-input-prefix {
+  position: relative;
+  padding-right: 10px !important;
+  &::after {
+    content: '';
+    border-right: 1px solid #ddd;
+    height: 60%;
+    position: absolute;
+    right: 0px;
+  }
+}
+.ant-input-affix-wrapper {
+  color: rgb(vars.$color-foreground) !important;
+}
+
+.ant-form-item {
+  color: rgb(vars.$color-foreground) !important;
+  font-size: vars.$font-size-s !important;
+  line-height: vars.$font-size !important;
+  margin-bottom: 16px !important;
+  .ant-form-item-label {
+    padding: 0 0 4px 0 !important;
+    label {
+      height: auto !important;
+      font-size: vars.$font-size-s !important;
+      line-height: vars.$font-size !important;
+      line-height: normal !important;
+      color: rgb(vars.$color-foreground) !important;
+    }
+  }
+  .ant-form-item-explain-error {
+    font-size: vars.$font-size-s !important;
+    line-height: 16px;
+  }
+}
+
+.ant-btn-default {
+  border-color: rgb(vars.$color-secondary) !important;
+  color: rgb(vars.$color-secondary) !important;
+}
+// -------------
+.ant-card {
+  border-radius: vars.$card-border-radius;
+  .ant-card-head,
+  .ant-card-body {
+    padding: 0.5rem 1.5rem;
+  }
+  .ant-card-body {
+    padding: 1rem 1.5rem;
+  }
+  .ant-card-head {
+    border-bottom: 1px solid transparent;
+  }
+}
+.ant-card-bordered {
+  border: 1px solid rgb(vars.$card-border-color) !important;
+}
+// -------------
+.ant-tabs-top > .ant-tabs-nav::before {
+  display: none;
+}
+.ant-tabs {
+  .ant-tabs-tab + .ant-tabs-tab {
+    margin: 0 0 0 16px;
+  }
+  .ant-tabs-tab {
+    padding: 6px 12px;
+    border-radius: 4px;
+    border: vars.$border-size solid rgb(vars.$color-primary);
+    color: rgb(vars.$color-primary);
+  }
+  .ant-tabs-tab-active {
+    background: rgb(vars.$color-primary);
+    .ant-tabs-tab-btn {
+      color: rgb(vars.$color-white) !important;
+    }
+  }
+  .ant-tabs-ink-bar {
+    display: none;
+  }
+}
+// -------------
+.ant-tag {
+  // background: transparent !important;
+  // border-color: transparent !important;
+}
+// ------------
+.ant-table-wrapper {
+  .ant-table-thead {
+    tr {
+      td,
+      th {
+        background: rgb(vars.$table-header-color);
+        color: rgb(vars.$color-secondary);
+        &:first-child {
+          border-radius: 8px 0 0 8px !important;
+        }
+        &:last-child {
+          border-radius: 0 8px 8px 0 !important;
+        }
+      }
+    }
+  }
+  .ant-table-tbody {
+    tr {
+      td {
+        .ant-table-wrapper:only-child {
+          .ant-table {
+            font-size: 11px;
+            .ant-table-thead {
+              tr th {
+                background: #f5f5f5;
+                padding: 4px 4px;
+              }
+              tr:first-child > *:first-child,
+              tr:last-child > *:last-child {
+                border-radius: 0 0 0 0 !important;
+              }
+            }
+            .ant-table-tbody {
+              tr td {
+                padding: 4px 4px;
+              }
+              tr:last-child {
+                td {
+                  border-bottom: 1px solid #f0f0f0;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .ant-table.ant-table-small {
+    font-size: 12px;
+    .ant-table-tbody {
+      .ant-table-wrapper:only-child {
+        .ant-table {
+          margin-block: 1rem;
+          margin-inline: 0px 0px;
+        }
+      }
+    }
+  }
+}
+
+// ----------
+.ant-breadcrumb a {
+  color: rgb(vars.$color-secondary);
+  &:hover {
+    color: rgb(vars.$color-secondary);
+    background-color: transparent;
+  }
+}
+// ----------
+.editable-cell {
+  position: relative;
+}
+
+.editable-cell-value-wrap {
+  padding: 5px 12px;
+  cursor: pointer;
+}
+
+.editable-row:hover .editable-cell-value-wrap {
+  padding: 4px 11px;
+  border: 1px solid #d9d9d9;
+  border-radius: 2px;
+}

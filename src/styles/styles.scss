@@ -1,0 +1,130 @@
+@use 'variables' as vars;
+@import 'reset';
+@import 'utilities';
+// ===================
+.colorPrimary {
+  color: rgb(var(--color-primary-rgb));
+}
+// ===================
+.cursorPointer {
+  cursor: pointer;
+}
+.qc-h-100 {
+  height: 100%;
+}
+// =========product page==========
+.tblProductImageContainer {
+  img {
+    max-width: 90px;
+    max-height: 65px;
+  }
+}
+.cursorPointer {
+  cursor: pointer;
+}
+// =========product page==========
+// =========user page==========
+.userContainer {
+  height: 100%;
+  .userTitleContainer {
+    text-align: center;
+    padding-top: 0.5rem;
+    .cardImg {
+      width: 60px;
+      height: 60px;
+      border-radius: 100%;
+      overflow: hidden;
+      margin: auto;
+      margin-bottom: 1rem;
+    }
+  }
+}
+// =========user page==========
+.productionReviewedBy {
+  background: #dcdcdc;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.pdfContainer {
+  background: #e7e7e7;
+  border-radius: vars.$border-radius;
+  text-align: center;
+  padding: 3rem;
+  font-size: 65px;
+  &:hover {
+    color: rgb(184, 0, 0);
+  }
+}
+
+.tbl {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+.tableSmall {
+  thead {
+    td,
+    th {
+      text-align: left;
+      padding: 8px 8px;
+      background: rgb(var(--table-header-color-rgb));
+      color: rgb(var(--color-secondary-rgb));
+      &:first-child {
+        border-radius: 8px 0 0 8px !important;
+      }
+    }
+  }
+  tbody {
+    td {
+      padding: 8px 8px;
+      border-bottom: 1px solid #f0f0f0;
+    }
+  }
+}
+.userRightTable {
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  td,
+  th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+}
+
+// ======== auditlog =========
+.tblAuditLogs {
+  .ant-table-tbody > tr > th,
+  .ant-table-tbody > tr > td {
+    border-bottom: 1px solid #6e6e6e;
+  }
+  .ant-table-tbody {
+    tr {
+      td {
+        .ant-table-wrapper:only-child {
+          .ant-table {
+            tr {
+              td {
+                padding-left: 1rem !important;
+              }
+            }
+          }
+        }
+      }
+      td:first-child {
+        border-left: 1px solid transparent !important;
+      }
+      td:last-child {
+        border-left: 1px solid #6e6e6e;
+      }
+    }
+  }
+}

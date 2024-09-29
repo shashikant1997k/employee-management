@@ -1,0 +1,155 @@
+@use '../variables' as vars;
+.main-layout {
+  min-height: 100vh;
+  .main-wrapper {
+    padding: 15px;
+    height: calc(100vh - 60px);
+    display: flex;
+    gap: 15px;
+    .main-side-bar {
+      background: rgb(vars.$color-white);
+      border-radius: vars.$border-radius;
+      overflow-y: auto;
+      display: flex;
+      .tree-nav {
+        padding: 1rem 0.5rem;
+        font-weight: 500;
+        width: 240px;
+        .activeMenu {
+          color: rgb(vars.$color-secondary);
+        }
+        .ant-tree {
+          color: rgba(vars.$color-secondary, 0.65);
+          font-size: vars.$font-size;
+          .ant-tree-treenode {
+            margin: 0 0 1.5rem 0;
+            .ant-tree-switcher {
+              position: absolute;
+              right: 0;
+            }
+          }
+          .ant-tree-node-content-wrapper:hover,
+          .ant-tree-checkbox + span:hover {
+            background-color: transparent;
+          }
+        }
+        .ant-tree-directory {
+          .ant-tree-treenode {
+            .ant-tree-node-content-wrapper.ant-tree-node-selected {
+              color: rgba(vars.$color-secondary, 0.65);
+              background: transparent;
+            }
+          }
+          .ant-tree-treenode:hover:before {
+            background: transparent;
+          }
+          .ant-tree-treenode-selected {
+            .ant-tree-switcher {
+              color: rgba(vars.$color-secondary, 0.65);
+            }
+          }
+          .ant-tree-treenode-selected:hover::before,
+          .ant-tree-treenode-selected::before {
+            background: transparent;
+          }
+        }
+        a {
+          display: block;
+          color: rgba(vars.$color-secondary, 0.65);
+          &:hover {
+            color: rgb(vars.$color-secondary) !important;
+          }
+        }
+      }
+    }
+    .main-content-wrapper {
+      width: 100%;
+      background: rgb(vars.$color-white);
+      border-radius: vars.$border-radius;
+      overflow-y: auto;
+    }
+    .breadcrumb-container {
+      padding: 1rem 1rem;
+      border-bottom: vars.$border-size solid rgb(vars.$border-color);
+    }
+    .main-page-header,
+    .main-filter-container,
+    .main-content-container {
+      padding: 0rem 1.5rem;
+    }
+    .main-page-header {
+      background: rgb(vars.$color-white);
+      position: sticky;
+      top: 0;
+      z-index: 3;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
+    .main-filter-container {
+      padding-bottom: 0.5rem;
+      border-bottom: vars.$border-size solid rgb(vars.$border-color);
+    }
+    .main-content-container {
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      .submitBtn {
+        min-width: 265px;
+        padding: 0.5rem;
+        height: auto;
+      }
+    }
+    .cardContainer {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      .gridKey {
+        color: rgb(vars.$color-secondary);
+        font-size: vars.$font-size-s;
+        font-weight: 600;
+      }
+      .gridValue {
+        font-size: vars.$font-size;
+        font-weight: 500;
+      }
+      .cardTitle {
+        .gridKey {
+          color: rgb(vars.$color-secondary);
+          font-size: vars.$font-size-s;
+        }
+        .gridValue {
+          font-size: vars.$font-size-l;
+        }
+      }
+      .cardDetail {
+        background: #fff4f2;
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+        margin-bottom: 1rem;
+        .cardImg {
+          background: rgb(vars.$color-white);
+          border: vars.$border-size solid rgb(vars.$border-color);
+          border-radius: vars.$border-radius;
+          padding: 0.5rem;
+          height: 190px;
+          .ant-image {
+            height: 100%;
+            display: flex;
+          }
+          img {
+            object-fit: contain;
+          }
+        }
+      }
+      .description {
+        margin-bottom: 1rem;
+      }
+      .settingDetail {
+        display: flex;
+        gap: 1rem;
+        justify-content: space-between;
+        border-top: vars.$border-size solid rgb(vars.$border-color);
+        padding-top: 1rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,42 @@
+@use "../variables" as vars;
+.qcMainHeader {
+  background: rgb(vars.$color-white);
+  color: rgb(vars.$color-black);
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0px;
+  z-index: 3;
+  overflow: hidden;
+  .logoContainer {
+    display: flex;
+    gap: 4rem;
+    img {
+      max-height: 45px;
+    }
+  }
+  .mainHeaderRightCol {
+    display: flex;
+    gap: 1rem;
+    .mainHeaderUserInfoGrid {
+      color: rgb(vars.$color-foreground) !important;
+      border: vars.$border-size solid rgb(vars.$border-color) !important;
+      border-radius: vars.$control-border-radius;
+      padding: 3px 8px 3px 3px;
+      height: auto !important;
+      .userTitle {
+        font-size: 13px;
+        line-height: 14px;
+        text-align: left;
+        .role {
+          font-weight: 500;
+        }
+        .userName {
+          color: rgba(vars.$color-foreground, 0.75);
+        }
+      }
+    }
+  }
+}

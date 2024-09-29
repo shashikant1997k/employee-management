@@ -1,0 +1,43 @@
+@mixin utility($property, $value) {
+  #{$property}: #{$value};
+}
+// ================
+@mixin bordered($color, $width) {
+  border: $width solid $color;
+}
+
+.item2 {
+  @include bordered(red, 1px);
+}
+
+.item2 {
+  @include bordered(green, 2px);
+}
+// ======================
+@mixin mixinDemo {
+  height: 44px;
+  font-size: 16px;
+}
+// =========mixin with extend ==========
+// =========mixin with extend ==========
+%qc-message {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+@mixin qc-message-styles($border-color, $color) {
+  @extend %qc-message;
+  border-color: $border-color;
+  color: $color;
+}
+.qc-success {
+  @include qc-message-styles(green, green);
+}
+.qc-error {
+  @include qc-message-styles(red, red);
+}
+.qc-warning {
+  @include qc-message-styles(orange, orange);
+}
+// =========mixin with extend ==========
+// =========mixin with extend ==========
